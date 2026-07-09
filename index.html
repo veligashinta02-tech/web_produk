@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Deskripsi Produk</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🌸 Generator Deskripsi Produk</h1>
+        <p>Buat deskripsi produk secara otomatis dan simpan ke Google Sheets</p>
+    </div>
+
+    <div class="form-grid">
+
+        <div class="form-group">
+            <label>Nama Produk</label>
+            <input
+                type="text"
+                id="namaProduk"
+                placeholder="Contoh: Lip Cream Velvet">
+        </div>
+
+        <div class="form-group">
+            <label>Kategori</label>
+            <select id="kategori">
+                <option value="">Pilih Kategori</option>
+                <option>Fashion</option>
+                <option>Kecantikan</option>
+                <option>Elektronik</option>
+                <option>Makanan & Minuman</option>
+                <option>Kesehatan</option>
+                <option>Peralatan Rumah Tangga</option>
+            </select>
+        </div>
+
+        <div class="form-group full">
+            <label>Fitur Produk</label>
+            <textarea
+                id="fitur"
+                placeholder="Contoh: Tahan air, ringan, desain premium"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Harga</label>
+            <input
+                type="number"
+                id="harga"
+                placeholder="50000">
+        </div>
+
+        <div class="form-group">
+            <label>Target Pasar</label>
+            <input
+                type="text"
+                id="targetPasar"
+                placeholder="Mahasiswa, pekerja, ibu rumah tangga">
+        </div>
+
+    </div>
+
+    <button type="button" class="btn" onclick="generateDeskripsi()">
+        ✨ Generate Deskripsi
+    </button>
+
+    <button type="button" class="btn" onclick="copyDeskripsi()">
+        📋 Copy Deskripsi
+    </button>
+
+    <button type="button" class="btn" onclick="resetForm()">
+        🔄 Reset Form
+    </button>
+
+    <button type="button" class="btn" onclick="simpanKeGoogleSheets()">
+        💾 Simpan ke Google Sheets
+    </button>
+
+    <div class="result">
+        <h3>📄 Hasil Deskripsi</h3>
+
+        <p id="hasilDeskripsi">
+            Deskripsi produk akan muncul di sini setelah tombol Generate ditekan.
+        </p>
+    </div>
+
+    <div class="footer">
+        © 2026 Generator Deskripsi Produk
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
